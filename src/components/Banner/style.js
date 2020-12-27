@@ -9,18 +9,8 @@ export const ImgStyle = styled.img`
 export const SlideMain = styled.div`
   position: relative;
 `;
+
 export const PrevArrow = styled.div`
-  /* position: absolute;
-  border: none;
-  background: none;
-  color: #2525;
-  top: 45%;
-  left: 5%;
-  outline: none;
-  cursor: pointer;
-  font-weight: normal;
-  font-size: 40px;
-  font-family: "themify"; */
   &:before {
     display: none;
   }
