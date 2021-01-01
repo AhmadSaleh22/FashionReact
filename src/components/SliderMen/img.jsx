@@ -1,0 +1,11 @@
+export { default as Women1 } from "./img/women-1.jpg";
+export { default as Women2 } from "./img/women-2.jpg";
+export { default as Women3 } from "./img/women-3.jpg";
+export { default as Women4 } from "./img/women-4.jpg";
+export { default as womenLarge } from "./img/women-large.jpg";
+export { default as Man1 } from "./img/man-1.jpg";
+export { default as Man2 } from "./img/man-2.jpg";
+export { default as Man3 } from "./img/man-3.jpg";
+export { default as Man4 } from "./img/man-4.jpg";
+export { default as MenLarge } from "./img/man-large.jpg";
+export { default as RandomSvg } from "./img/random-solid.svg";
