@@ -6,6 +6,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
   department: {
+    zIndex: "999",
     backgroundColor: "rgb(59, 59, 59)",
     padding: "9px",
     color: "#fff",
@@ -37,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "50px",
   },
   hoverClass: {
+    animation: "$myEffectdisplay 1.3s",
     display: "none",
     flexDirection: "column",
     position: "absolute",
@@ -61,6 +63,14 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
         color: "#e7ab3c",
       },
+    },
+  },
+  "@keyframes myEffectdisplay": {
+    from: {
+      opacity: 0,
+    },
+    to: {
+      opacity: 1,
     },
   },
 }));
