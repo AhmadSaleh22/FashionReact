@@ -1,7 +1,7 @@
 import React from "react";
 import bus from "./images/icon.png";
 import clock from "./images/clock.png";
-import { Typography, Paper, makeStyles, Grid } from "@material-ui/core";
+import { Typography, makeStyles, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +29,7 @@ function OneComp(props) {
   return (
     <Grid item xs={4} className={classes.oneGrid} container>
       <Grid>
-        <img src={props.source} className={classes.img} />
+        <img src={props.source} className={classes.img} alt="img" />
       </Grid>
       <Grid>
         <Typography variant="h6">{props.title}</Typography>

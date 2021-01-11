@@ -8,6 +8,7 @@ export const ImgStyle = styled.img`
 `;
 export const SlideMain = styled.div`
   position: relative;
+  /* height: 120vh; */
 `;
 
 export const PrevArrow = styled.div`

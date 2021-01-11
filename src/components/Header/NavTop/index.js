@@ -12,7 +12,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { flag1, flag2 } from "../img";
+import { flag1, flag2 } from "../img/img";
 
 const useStyles = makeStyles({
   root: {

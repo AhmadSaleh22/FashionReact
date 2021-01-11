@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 import Date from "./Date";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
@@ -36,8 +36,8 @@ const useStyles = makeStyles({
   },
 });
 export default function BlogCard(props) {
-  const [Dateme, setDateme] = useState();
-  const [Comments, setComment] = useState();
+  // const [Dateme, setDateme] = useState();
+  // const [Comments, setComment] = useState();
 
   const classes = useStyles();
 

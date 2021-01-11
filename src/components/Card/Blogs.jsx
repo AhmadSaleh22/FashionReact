@@ -27,30 +27,30 @@ const useStyles = makeStyles({
     marginBottom: "38px",
   },
 });
+const initialValue = [{ title: "Title", content: " --- content ---" }];
+
+const allowedState = [
+  {
+    title: "The Best Street Style From London Fashion Week",
+    content:
+      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",
+    img: blogSrc,
+  },
+  {
+    title: "Vogue's Ultimate Guide To Autumn/Winter 2019 Shoes",
+    content:
+      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",
+    img: blogSrc2,
+  },
+  {
+    title: "How To Brighten Your Wardrobe With A Dash",
+    content:
+      "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",
+    img: blogSrc3,
+  },
+];
 export default function Blogs() {
   const classes = useStyles();
-  const initialValue = [{ title: "Title", content: " --- content ---" }];
-
-  const allowedState = [
-    {
-      title: "The Best Street Style From London Fashion Week",
-      content:
-        "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",
-      img: blogSrc,
-    },
-    {
-      title: "Vogue's Ultimate Guide To Autumn/Winter 2019 Shoes",
-      content:
-        "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",
-      img: blogSrc2,
-    },
-    {
-      title: "How To Brighten Your Wardrobe With A Dash",
-      content:
-        "Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",
-      img: blogSrc3,
-    },
-  ];
 
   const [stateOptions, setStateValues] = useState(initialValue);
   // initialValue.push(...allowedState);

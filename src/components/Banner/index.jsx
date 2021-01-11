@@ -5,7 +5,7 @@ import * as S from "./style";
 import { BannerContent } from "./BannerContent";
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <S.NextArrow className={className} onClick={onClick}>
       ＞
@@ -40,7 +40,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function CustomArrows() {
+export default function Banner() {
   const settings = {
     dots: false,
     infinite: true,

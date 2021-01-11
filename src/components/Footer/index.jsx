@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, TextField, makeStyles } from "@material-ui/core";
+import { Grid, Typography, makeStyles } from "@material-ui/core";
 import Logo from "./images/footer-logo.png";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -14,7 +14,6 @@ const MyStyle = makeStyles({
     display: "flex",
     bottom: "0",
     left: "0",
-    position: "fixed",
     width: "100%",
     height: "auto",
   },
@@ -160,7 +159,7 @@ function ColText(props) {
     <div className={classes.col}>
       <Grid>
         {MyProps ? (
-          <img src={Logo} className={classes.head} />
+          <img src={Logo} className={classes.head} alt="img" />
         ) : (
           <Typography variant="body1" className={classes.head}>
             {props.top}

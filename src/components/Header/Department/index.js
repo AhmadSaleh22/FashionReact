@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, rgbToHex } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";

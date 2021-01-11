@@ -1,5 +1,5 @@
 import React from "react";
-import Feature from "./Feature";
+import CollectionCon from "./CollectionCon";
 import { Grid, makeStyles } from "@material-ui/core";
 import woman from "./images/girl1.jpg";
 import woman1 from "./images/girl2.jpg";
@@ -18,12 +18,12 @@ export default function index() {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Feature preview={woman} />
-        <Feature preview={woman1} />
-        <Feature preview={woman2} />
-        <Feature preview={woman3} />
-        <Feature preview={woman4} />
-        <Feature preview={man} />
+        <CollectionCon preview={woman} />
+        <CollectionCon preview={woman1} />
+        <CollectionCon preview={woman2} />
+        <CollectionCon preview={woman3} />
+        <CollectionCon preview={woman4} />
+        <CollectionCon preview={man} />
       </Grid>
     </div>
   );

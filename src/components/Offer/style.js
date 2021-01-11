@@ -1,4 +1,4 @@
-import { makeStyles, fade, Button, withStyles } from "@material-ui/core";
+import { makeStyles, Button, withStyles } from "@material-ui/core";
 import offer from "./time-bg.jpg";
 
 export default makeStyles((theme) => ({

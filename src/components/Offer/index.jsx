@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, Container, Typography } from "@material-ui/core";
 import Timer from "./Timer";
 import useStyles from "./style";
