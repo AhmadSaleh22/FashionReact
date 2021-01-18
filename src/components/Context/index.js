@@ -8,7 +8,7 @@ import {
   Man2,
   Man3,
   Man4,
-} from "../Slider/img";
+} from "../SliderWomen/img.jsx";
 
 export const DataContext = createContext();
 
@@ -49,7 +49,7 @@ export function ContextProvider(props) {
 
   const [productsMen, setProductsMen] = useState([
     {
-      _id: "1",
+      _id: "5",
       src: `${Man1}`,
       sale: "sale",
       title: "Coat",
@@ -59,21 +59,21 @@ export function ContextProvider(props) {
     },
 
     {
-      _id: "2",
+      _id: "6",
       src: `${Man2}`,
       title: "Shoes",
       description: "Guangzhou sweater",
       price: "34",
     },
     {
-      _id: "3",
+      _id: "7",
       src: `${Man3}`,
       title: "Towel",
       description: "Pure Pineapple",
       price: "13",
     },
     {
-      _id: "4",
+      _id: "8",
       src: `${Man4}`,
       title: "Towel",
       description: "Converse Shoes",
@@ -83,18 +83,23 @@ export function ContextProvider(props) {
   const [cart, setCart] = useState([]);
 
   function addCart(id) {
-    const data = products.filter((product) => {
-      return product._id === id;
+    const check = cart.every((item) => {
+      return item._id !== id;
     });
-    setCart([...cart, ...data]);
-    console.log([...cart, ...data]);
-  }
+    if (check) {
+      const data = products.filter((product) => {
+        return product._id === id;
+      });
 
+      setCart([...cart, ...data]);
+      console.log(...cart, ...data);
+    }
+  }
   const value = {
     products: [products, setProducts],
     productsMen: [productsMen, setProductsMen],
     cart: [cart, setCart],
-    addCart: addCart,
+    addCart,
   };
   return (
     <DataContext.Provider value={value}>{props.children}</DataContext.Provider>

@@ -14,21 +14,20 @@ export const FeaturesMain = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   flex-direction: space-between;
+  padding: 80px 0;
 `;
 export const Layer = styled.div`
   position: absolute;
-  left: 35px;
+  left: 45px;
   top: 30px;
   border: 13px solid #ffffff;
   content: "";
   opacity: 0.3;
   color: white;
-  padding: 75px 80px;
+  padding: 67px 150px;
   width: 40%;
   margin-left: 20px;
   z-index: 20;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
   display: none;
 `;
 export const FeaturesDiv = styled.div`

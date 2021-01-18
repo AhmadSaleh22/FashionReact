@@ -1,73 +1,26 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useContext } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Typography from "@material-ui/core/Typography";
 import Badge from "@material-ui/core/Badge";
+import { withStyles } from "@material-ui/core/styles";
+import { useStyles } from "./style";
+import { DataContext } from "../../Context";
 
-const useStyles = makeStyles({
-  root: {
-    display: "flex",
-    padding: " 39px 0",
-    justifyContent: "space-evenly",
-  },
-  mainCat: {
-    height: "50px",
-    border: "1px solid #ebebeb",
-    width: "682.5px",
-  },
-  category: {
-    float: "left",
-    background: "transparent",
-    border: "none",
-    paddingLeft: "23px",
-    paddingTop: "13px",
-    paddingBottom: "13px",
-    paddingRight: "30px",
-    fontSize: "16px",
-    color: "#252525",
-  },
-  inputBox: {
-    border: "none",
-    fontSize: "15px",
-    color: "#d1d1d1",
-    paddingLeft: "20px",
-  },
-  expandIcon: {
-    color: "rgb(178, 178, 178)",
-    fontSize: "16px",
-    marginTop: "13px",
-    borderRight: "1px solid #b2b2b2",
-    width: "40px",
-  },
-  searchIcon: {
-    color: "#ffffff",
-    border: "1px solid #e7ab3c",
-    background: "#e7ab3c",
-    padding: "12px 14px 8px",
-    cursor: "pointer",
-    float: "right",
-  },
-  heartIcon: {
-    fontSize: "20px",
-    position: "relative",
-    marginRight: "14px",
-    marginTop: "10px",
-  },
-  price: {
-    fontSize: "18px",
-    fontWeight: "700",
-    marginTop: "12px",
-  },
-  customBadge: {
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    right: -1,
+    top: 2,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
     backgroundColor: "#e7ab3c",
-    color: "white",
   },
-});
-
+}))(Badge);
 export default function HeaderTop() {
+  const value = useContext(DataContext);
+  const [cart] = value.cart;
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -93,21 +46,19 @@ export default function HeaderTop() {
           <SearchIcon />
         </button>
       </div>
-      <div style={{ display: "inline-flex", marginRight: "2%" }}>
-        <Badge
-          classes={{ badge: classes.customBadge }}
-          className={classes.heartIcon}
-          badgeContent={1}
-        >
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <StyledBadge badgeContent={0} color="secondary" showZero>
           <FavoriteBorderIcon />
-        </Badge>
-        <Badge
-          classes={{ badge: classes.customBadge }}
-          className={classes.heartIcon}
-          badgeContent={1}
+        </StyledBadge>
+
+        <StyledBadge
+          badgeContent={cart.length}
+          color="secondary"
+          style={{ marginLeft: "13px" }}
+          showZero
         >
           <LocalMallIcon />
-        </Badge>
+        </StyledBadge>
         <Typography variant="h5" gutterBottom className={classes.price}>
           $150.00
         </Typography>

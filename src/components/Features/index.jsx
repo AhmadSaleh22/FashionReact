@@ -5,7 +5,7 @@ export function Features() {
   return (
     <S.FeaturesMain>
       <S.FeaturesDiv>
-        <S.Layer></S.Layer>
+        <S.Layer />
         <S.FeaturesImg src={`${Features1}`} alt="img" />
         <S.InnerText>
           <S.InnerTextBox>Men's</S.InnerTextBox>

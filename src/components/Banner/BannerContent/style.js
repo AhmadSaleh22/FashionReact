@@ -13,7 +13,7 @@ export const TitleBanner = styled.h5`
   letter-spacing: 2px;
   font-family: sans-serif;
   text-transform: uppercase;
-  margin-bottom: -40px;
+  margin-bottom: 10px;
 `;
 
 export const TitleTwo = styled.h1`
@@ -21,7 +21,7 @@ export const TitleTwo = styled.h1`
   font-size: 72px;
   font-weight: 700;
   font-family: sans-serif;
-  margin-bottom: -5px;
+  margin-bottom: 10px;
 `;
 export const ContentBanner = styled.p`
   font-size: 16px;
@@ -29,6 +29,7 @@ export const ContentBanner = styled.p`
   color: #636363;
   font-weight: 400;
   line-height: 26px;
+  margin-bottom: 20px;
 `;
 export const BannerTag = styled.a`
   display: inline-block;
