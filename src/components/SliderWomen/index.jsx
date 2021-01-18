@@ -90,7 +90,10 @@ export default function FullWidthTabs() {
             textColor="inherit"
             variant="fullWidth"
             aria-label="full width tabs example"
-            style={{ marginLeft: "100px", color: "#171717" }}
+            style={{
+              marginLeft: "100px",
+              color: "#171717",
+            }}
           >
             <Tab
               label="Clothings"
@@ -116,12 +119,12 @@ export default function FullWidthTabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
+        <TabPanel value={value} index={0}>
           <CustomArrows />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}></TabPanel>
+        <TabPanel value={value} index={1} />
 
-        <TabPanel value={value} index={2} dir={theme.direction}></TabPanel>
+        <TabPanel value={value} index={2} />
       </SwipeableViews>
     </div>
   );
